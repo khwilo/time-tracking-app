@@ -11,3 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.start-btn, .edit-btn, .delete-btn {
+  cursor: pointer;
+}
