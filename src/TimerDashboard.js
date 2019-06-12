@@ -5,10 +5,11 @@ import ToggleableTimerForm from './ToggleableTimerForm';
 class TimerDashboard extends Component {
   render() {
     return (
-      <div className="App">
-        <p>HELLO</p>
-        <EditableTimerList />
-        <ToggleableTimerForm />
+      <div className="d-flex justify-content-center mt-5">
+        <div>
+          <EditableTimerList />
+          <ToggleableTimerForm />
+        </div>
       </div>
     );
   }
