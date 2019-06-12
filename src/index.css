@@ -16,6 +16,10 @@ code {
   cursor: pointer;
 }
 
+.start-btn {
+  border: 1px solid;
+}
+
 .edit-btn:hover {
   color: green;
 }

@@ -24,7 +24,7 @@ class Timer extends Component {
                         </span>
                     </div>
                 </div>
-                <div className="card-footer text-center bg-light text-info start-btn">
+                <div className="card-footer text-center bg-transparent text-info start-btn">
                     Start
                 </div>
             </div>
