@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Timer extends Component {
     render() {
-        const elapsedString = this.props.elapsed;
+        const elapsedString = new Date(this.props.elapsed * 1000).toISOString().substr(11,8);
         return (
             <div className="card mt-2">
                 <div className="card-body">
