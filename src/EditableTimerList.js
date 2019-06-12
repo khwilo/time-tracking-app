@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import EditableTimer from './EditableTimer';
 
 class EditableTimerList extends Component {
     render() {
         return (
-            <div>
-                <p>Editable Timer</p>
+            <div id="timers">
+                <EditableTimer
+                    title   = "Learn React"
+                    project = "Web Domination" />
             </div>
         );
     }
