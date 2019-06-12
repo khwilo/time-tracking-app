@@ -4,7 +4,7 @@ class TimerForm extends Component {
     render() {
         const submitText = this.props.title ? 'Update' : 'Create';
         return (
-            <div className="card">
+            <div className="card mt-5">
                 <div className="card-body">
                     <form>
                         <div className="form-group">
