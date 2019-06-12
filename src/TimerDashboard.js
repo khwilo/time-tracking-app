@@ -8,7 +8,9 @@ class TimerDashboard extends Component {
       <div className="d-flex justify-content-center">
         <div>
           <EditableTimerList />
-          <ToggleableTimerForm />
+          <ToggleableTimerForm
+            isOpen = {true}
+          />
         </div>
       </div>
     );
