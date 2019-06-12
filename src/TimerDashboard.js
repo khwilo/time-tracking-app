@@ -1,7 +1,6 @@
 import React from 'react';
-import './App.css';
 
-function App() {
+function TimerDashboard() {
   return (
     <div className="App">
       <p>HELLO</p>
@@ -9,4 +8,4 @@ function App() {
   );
 }
 
-export default App;
+export default TimerDashboard;
