@@ -15,3 +15,11 @@ code {
 .start-btn, .edit-btn, .delete-btn {
   cursor: pointer;
 }
+
+.edit-btn:hover {
+  color: green;
+}
+
+.delete-btn:hover {
+  color: red;
+}
