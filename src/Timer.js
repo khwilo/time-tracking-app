@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 class Timer extends Component {
     render() {
-        const elapsedString = new Date(this.props.elapsed * 1000).toISOString().substr(11,8);
         return (
             <div className="card mt-2">
                 <div className="card-body">
@@ -13,7 +12,7 @@ class Timer extends Component {
                         {this.props.project}
                     </div>
                     <div className="d-flex justify-content-center align-items-center mt-2">
-                        <h2>{elapsedString}</h2>
+                        <h2>{this.props.onRenderElapsedString}</h2>
                     </div>
                     <div className="extra content d-flex">
                         <span className="ml-auto edit-btn">

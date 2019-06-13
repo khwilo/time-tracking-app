@@ -19,11 +19,12 @@ class EditableTimer extends Component {
         } else {
             return (
                 <Timer
-                    id           = {this.props.id}
-                    title        = {this.props.title}
-                    project      = {this.props.project}
-                    elapsed      = {this.props.elapsed}
-                    runningSince = {this.props.runningSince} />
+                    id                    = {this.props.id}
+                    title                 = {this.props.title}
+                    project               = {this.props.project}
+                    elapsed               = {this.props.elapsed}
+                    runningSince          = {this.props.runningSince}
+                    onRenderElapsedString = {this.props.onRenderElapsedString} />
             );
         }
     }
