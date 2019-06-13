@@ -24,6 +24,31 @@ class TimerDashboard extends Component {
     ],
   };
 
+  handleCreateFormSubmit = (timer) => {
+    this.createTimer(timer);
+  };
+
+  createTimer = (timer) => {
+    const t = this.newTimer(timer);
+    this.setState({
+      timers: this.state.timers.concat(t)
+    });
+  };
+
+  newTimer = (attributes) => {
+    let { ...attrs } = attributes ;
+
+    const timer        = {
+      title  : attrs.title || "Timer",
+      project: attrs.project || "Project",
+      id     : uuid.v4(),
+      elapsed: 0
+    };
+
+    return timer;
+  }
+
+
   render() {
     return (
       <div className="d-flex justify-content-center">
@@ -31,7 +56,9 @@ class TimerDashboard extends Component {
           <EditableTimerList
             timers = {this.state.timers}
           />
-          <ToggleableTimerForm />
+          <ToggleableTimerForm
+            onFormSubmit = {this.handleCreateFormSubmit}
+          />
         </div>
       </div>
     );

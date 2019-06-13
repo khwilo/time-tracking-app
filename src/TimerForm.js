@@ -14,8 +14,16 @@ class TimerForm extends Component {
         this.setState({ project: e.target.value });
     };
 
+    handleSubmit = () => {
+        this.props.onFormSubmit({
+            id     : this.props.id,
+            title  : this.state.title,
+            project: this.state.project
+        });
+    };
+
     render() {
-        const submitText = this.props.title ? 'Update' : 'Create';
+        const submitText = this.props.id ? 'Update' : 'Create';
         return (
             <div className="card mt-5">
                 <div className="card-body">
@@ -41,10 +49,16 @@ class TimerForm extends Component {
                             />
                         </div>
                         <div className="form-group btn-group d-flex">
-                            <button className="btn btn-info">
+                            <button
+                                type      = "button"
+                                className = "btn btn-info"
+                                onClick   = {this.handleSubmit}>
                                 {submitText}
                             </button>
-                            <button className="btn btn-danger">
+                            <button
+                                type      = "button"
+                                className = "btn btn-danger"
+                                onClick   = {this.props.onFormClose}>
                                 Cancel
                             </button>
                         </div>
