@@ -8,7 +8,7 @@ class TimerForm extends Component {
                 <div className="card-body">
                     <form>
                         <div className="form-group">
-                            <label for="Title">Title</label>
+                            <label htmlFor="Title">Title</label>
                             <input
                                 className    = "form-control"
                                 type         = "text"
@@ -18,7 +18,7 @@ class TimerForm extends Component {
                             />
                         </div>
                         <div className="form-group">
-                            <label for="Project">Project</label>
+                            <label htmlFor="Project">Project</label>
                             <input
                                 className    = "form-control"
                                 type         = "text"
