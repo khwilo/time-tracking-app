@@ -1,6 +1,19 @@
 import React, { Component } from 'react';
 
 class TimerForm extends Component {
+    state = {
+        title  : this.props.title || "",
+        project: this.props.project || "",
+    };
+
+    handleTitleChange = (e) => {
+        this.setState({ title: e.target.value });
+    };
+
+    handleProjectChange = (e) => {
+        this.setState({ project: e.target.value });
+    };
+
     render() {
         const submitText = this.props.title ? 'Update' : 'Create';
         return (
@@ -10,21 +23,21 @@ class TimerForm extends Component {
                         <div className="form-group">
                             <label htmlFor="Title">Title</label>
                             <input
-                                className    = "form-control"
-                                type         = "text"
-                                id           = "title"
-                                placeholder  = "title"
-                                defaultValue = {this.props.title}
+                                className   = "form-control"
+                                type        = "text"
+                                placeholder = "title"
+                                value       = {this.state.title}
+                                onChange    = {this.handleTitleChange}
                             />
                         </div>
                         <div className="form-group">
                             <label htmlFor="Project">Project</label>
                             <input
-                                className    = "form-control"
-                                type         = "text"
-                                id           = "project"
-                                placeholder  = "project"
-                                defaultValue = {this.props.project}
+                                className   = "form-control"
+                                type        = "text"
+                                placeholder = "project"
+                                value       = {this.state.project}
+                                onChange    = {this.handleProjectChange}
                             />
                         </div>
                         <div className="form-group btn-group d-flex">
