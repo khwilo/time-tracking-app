@@ -31,9 +31,7 @@ class TimerDashboard extends Component {
           <EditableTimerList
             timers = {this.state.timers}
           />
-          <ToggleableTimerForm
-            isOpen = {true}
-          />
+          <ToggleableTimerForm />
         </div>
       </div>
     );
