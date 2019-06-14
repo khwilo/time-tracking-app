@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 
 class Timer extends Component {
+    handleTrashClick = () => {
+        this.props.onTrashClick(this.props.id);
+    };
+
     render() {
         return (
             <div className="card mt-2">
@@ -22,7 +26,9 @@ class Timer extends Component {
                             <i className="fa fa-pencil-square-o" aria-hidden="true" />
                         </span>
                         <span
-                            className="ml-2 delete-btn">
+                            className = "ml-2 delete-btn"
+                            onClick   = {this.handleTrashClick}
+                        >
                             <i className="fa fa-trash" aria-hidden="true" />
                         </span>
                     </div>
