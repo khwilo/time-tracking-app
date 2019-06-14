@@ -15,10 +15,14 @@ class Timer extends Component {
                         <h2>{this.props.onRenderElapsedString}</h2>
                     </div>
                     <div className="extra content d-flex">
-                        <span className="ml-auto edit-btn">
+                        <span
+                            className = "ml-auto edit-btn"
+                            onClick   = {this.props.onEditClick}
+                        >
                             <i className="fa fa-pencil-square-o" aria-hidden="true" />
                         </span>
-                        <span className="ml-2 delete-btn">
+                        <span
+                            className="ml-2 delete-btn">
                             <i className="fa fa-trash" aria-hidden="true" />
                         </span>
                     </div>
