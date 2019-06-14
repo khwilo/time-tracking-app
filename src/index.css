@@ -16,7 +16,7 @@ code {
   cursor: pointer;
 }
 
-.start-btn {
+.start-btn, .stop-btn {
   border: 1px solid;
 }
 
