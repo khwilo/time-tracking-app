@@ -1,11 +1,23 @@
 import React, { Component } from 'react';
 
 class Timer extends Component {
+    componentDidMount() {
+        this.forceUpdateInterval = setInterval(() => this.forceUpdate(), 50);
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.forceUpdateInterval)
+    }
+
     handleTrashClick = () => {
         this.props.onTrashClick(this.props.id);
     };
 
     render() {
+        const elapsedString =  this.props.onRenderElapsedString(
+            this.props.elapsed, this.props.runningSince
+        );
+
         return (
             <div className="card mt-2">
                 <div className="card-body">
@@ -16,7 +28,7 @@ class Timer extends Component {
                         {this.props.project}
                     </div>
                     <div className="d-flex justify-content-center align-items-center mt-2">
-                        <h2>{this.props.onRenderElapsedString}</h2>
+                        <h2>{elapsedString}</h2>
                     </div>
                     <div className="extra content d-flex">
                         <span
