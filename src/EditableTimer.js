@@ -50,6 +50,8 @@ class EditableTimer extends Component {
                     onRenderElapsedString = {this.props.onRenderElapsedString}
                     onEditClick           = {this.handleEditClick}
                     onTrashClick          = {this.props.onTrashClick}
+                    onStartClick          = {this.props.onStartClick}
+                    onStopClick           = {this.props.onStopClick}
                 />
             );
         }

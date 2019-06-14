@@ -35,6 +35,8 @@ class EditableTimerList extends Component {
                 onRenderElapsedString = {this.handleRenderElapsedString}
                 onFormSubmit          = {this.props.onFormSubmit}
                 onTrashClick          = {this.props.onTrashClick}
+                onStartClick          = {this.props.onStartClick}
+                onStopClick           = {this.props.onStopClick}
             />
         ));
         return (
