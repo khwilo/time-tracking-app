@@ -1,26 +1,26 @@
 {
-  "name": "time_tracking_app_server",
-  "version": "1.0.0",
+  "name"       : "time_tracking_app_server",
+  "version"    : "1.0.0",
   "description": "Time tracking app backend",
-  "main": "server.js",
-  "scripts": {
-    "client": "cd client && npm start",
+  "main"       : "server.js",
+  "scripts"    : {
+    "client": "cd ../client && npm start",
     "server": "nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+    "dev"   : "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/khwilo/time-tracking-app.git"
+    "url" : "git+https://github.com/khwilo/time-tracking-app.git"
   },
-  "author": "Khwilo Kabaka",
+  "author" : "Khwilo Kabaka",
   "license": "MIT",
-  "bugs": {
+  "bugs"   : {
     "url": "https://github.com/khwilo/time-tracking-app/issues"
   },
-  "homepage": "https://github.com/khwilo/time-tracking-app#readme",
+  "homepage"    : "https://github.com/khwilo/time-tracking-app#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "express": "^4.17.1"
+    "express"    : "^4.17.1"
   },
   "devDependencies": {
     "concurrently": "^4.1.0"
