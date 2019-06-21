@@ -67,7 +67,7 @@ const checkStatus = (response) => {
     if (response.status >= 200 && response.status < 300) {
         return response;
     } else {
-        const error = new Error(`Http Erro ${response.statusText}`);
+        const error = new Error(`Http Error ${response.statusText}`);
 
         error.status   = response.statusText;
         error.response = response;
