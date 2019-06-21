@@ -4,7 +4,7 @@ import uuid from 'uuid';
 import EditableTimerList from './EditableTimerList';
 import ToggleableTimerForm from './ToggleableTimerForm';
 
-import { getTimers } from './client';
+import * as client from './client';
 
 class TimerDashboard extends Component {
   state = {
@@ -17,7 +17,7 @@ class TimerDashboard extends Component {
   }
 
   loadTimersFromServer = () => {
-    getTimers((serverTimers) => {
+    client.getTimers((serverTimers) => {
       this.setState({ timers: serverTimers })
     });
   }
