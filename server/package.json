@@ -5,7 +5,7 @@
   "main"       : "server.js",
   "scripts"    : {
     "client": "cd ../client && npm start",
-    "server": "nodemon server.js --ignore '../client/'",
+    "server": "nodemon server.js",
     "dev"   : "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
   },
   "repository": {
