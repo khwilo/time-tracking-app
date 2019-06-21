@@ -99,6 +99,13 @@ class TimerDashboard extends Component {
         }
       }),
     });
+
+    client.startTimer(
+      {
+        id   : timerId,
+        start: now
+      }
+    );
   };
 
   stopTimer = (timerId) => {
@@ -117,6 +124,13 @@ class TimerDashboard extends Component {
         }
       }),
     });
+
+    client.stopTimer(
+      {
+        id   : timerId,
+        start: now
+      }
+    );
   };
 
   render() {
