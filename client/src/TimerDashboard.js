@@ -31,6 +31,8 @@ class TimerDashboard extends Component {
     this.setState({
       timers: this.state.timers.concat(t)
     });
+
+    client.createTimer(t);
   };
 
   newTimer = (attributes) => {
@@ -63,6 +65,8 @@ class TimerDashboard extends Component {
         }
       }),
     });
+
+    client.updateTimer(attrs);
   };
 
   handleTrashClick = (timerId) => {
@@ -75,6 +79,12 @@ class TimerDashboard extends Component {
         timer => timer.id !== timerId
       )
     });
+
+    client.deleteTimer(
+      {
+        id: timerId
+      }
+    );
   };
 
   handleStartClick = (timerId) => {
